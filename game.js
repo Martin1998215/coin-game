@@ -4,10 +4,12 @@ const oddValueHead = document.querySelector(".odd-value-head");
 const oddValueTail = document.querySelector(".odd-value-tail");
 const enterAmount = document.querySelector(".enter");
 const potentialReturn = document.querySelector(".potential-return");
-const attempts = document.querySelector(".attempts");
-const winValue = document.querySelector(".win");
-const looseValue = document.querySelector(".loose");
-const scoreValue = document.querySelector(".score");
+const userAttempts = document.querySelector(".user-attempts");
+const computerAttempts = document.querySelector(".computer-attempts");
+const userWinValue = document.querySelector(".user-win");
+const userLooseValue = document.querySelector(".user-loose");
+const computerWinValue = document.querySelector(".computer-win");
+const computerLooseValue = document.querySelector(".computer-loose");
 const userImg = document.querySelector(".user-answer-img");
 const computerImg = document.querySelector(".computer-answer-img");
 const userText = document.querySelector(".user-answer-text");
@@ -36,7 +38,12 @@ const computerArry = [
     }
 ];
 
-
+let userAttemptCount = 0;
+let computerAttemptCount = 0;
+let userWinCount = 0;
+let computerWinCount = 0;
+let computerLooseCount = 0;
+let userLooseCount = 0;
 
 function active(elem) {
     elem.classList.add('active');
@@ -105,42 +112,86 @@ setInterval(function () {
     potentialReturn.innerHTML = eva.toFixed(2);
 }, 10);
 
-let randomHead = Math.floor(Math.random() * headArry.length);
-oddValueHead.innerHTML = headArry[randomHead];
+window.addEventListener("DOMContentLoaded", function () {
+    randomHeadValue()
+    randomTailValue()
+});
+
+function randomHeadValue() {
+    let randomHead = Math.floor(Math.random() * headArry.length);
+    oddValueHead.innerHTML = headArry[randomHead];
+
+}
 
 
-let randomTail = Math.floor(Math.random() * tailArry.length);
-oddValueTail.innerHTML = tailArry[randomTail];
+function randomTailValue() {
+    let randomTail = Math.floor(Math.random() * tailArry.length);
+    oddValueTail.innerHTML = tailArry[randomTail];
+}
+
 
 
 
 function Testing(user, computer) {
-    if (user == 'Head' && computer == 'Head') {
+    if ((user == 'Head' && computer == 'Head') || (user == "Tail" && computer == "Tail")) {
         return true;
     }
+
 }
 
 function game() {
 
-    let random = Math.floor(Math.random() * computerArry.length);
-    computerText.innerHTML = computerArry[random].text;
-    computerImg.style.backgroundImage = computerArry[random].img;
 
-    if (Testing(userText.innerHTML, computerText.innerHTML)) {
-        let ans = potentialReturn.innerHTML;
-        let x = ans;
-        amountBalance.innerHTML = x;
-        result.innerHTML = "win";
+    if (enterAmount.value == '') {
+        alert("Amount Entry must be filled!")
     } else {
+        userAttemptCount++;
+        computerAttemptCount++;
+        let random = Math.floor(Math.random() * computerArry.length);
+        computerText.innerHTML = computerArry[random].text;
+        computerImg.style.backgroundImage = computerArry[random].img;
 
-        result.innerHTML = "Loose";
-        let ans1 = potentialReturn.innerHTML - (enterAmount.value * hide.innerHTML);
-        let y = ans1;
-        amountBalance.innerHTML = y;
+        randomHeadValue()
+        randomTailValue()
+        userAttempts.innerHTML = userAttemptCount;
+        computerAttempts.innerHTML = computerAttemptCount;
+
+        if (Testing(userText.innerHTML, computerText.innerHTML)) {
+            userWinCount++;
+            computerLooseCount++;
+            let ans = potentialReturn.innerHTML;
+            let x = ans;
+            amountBalance.innerHTML = x;
+            result.innerHTML = "win";
+            userWinValue.innerHTML = userWinCount;
+            computerLooseValue.innerHTML = computerLooseCount;
+        } else {
+            computerWinCount++;
+            userLooseCount++;
+            result.innerHTML = "Loose";
+            let ans1 = potentialReturn.innerHTML - potentialReturn.innerHTML;
+            let y = ans1;
+            amountBalance.innerHTML = y;
+            computerWinValue.innerHTML = computerWinCount;
+            userLooseValue.innerHTML = userLooseCount;
+        }
+
     }
 
+
+
 }
+function Erase() {
+    enterAmount.value = '';
+    inactive([headBtn])
+    inactive([tailBtn])
+    inact([oddValueHead])
+    inact([oddValueTail])
+}
+
+
 
 play.addEventListener("click", function () {
     game()
+    Erase()
 });
