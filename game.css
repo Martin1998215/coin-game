@@ -1,0 +1,218 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 96%;
+    margin: 10px auto;
+    background: lightgray;
+}
+
+.container {
+    width: 100%;
+    border: 0.4px solid black;
+    background: white;
+
+}
+.head-section {
+    background: #26dcff;
+    padding: 10px;
+    text-align: center;
+}
+.head-btn, .tail-btn {
+    text-align: center;
+    width: 43%;
+    border: 0.4px solid gray;
+    color: red;
+    margin: 5px;
+}
+.head-section > h2, h5,h6 {
+    padding: 5px;
+} 
+
+.section-1 {
+    border: 0.4px solid black;
+    width: 98%;
+    margin: 5px auto;
+    padding: 10px 0;
+}
+.sub-section-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 98%;
+    margin: 5px auto;
+    border: 0.4px solid gray;
+}
+.sub-section-2 {
+    border: 0.4px solid black;
+    width: 98%;
+    margin: 5px auto;
+
+}
+ .amount-section, .potential-return-section, .result-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 98%;
+    margin: 5px auto;
+    padding: 5PX;
+    border: 0.4px solid gray;
+}
+.odds-section {
+    width: 98%;
+    margin: 5px auto;
+    padding: 5PX;
+    border: 0.4px solid gray;
+    text-align: center;
+}
+#odds {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 0.4px solid gray;
+}
+.odd-value-head, .odd-value-tail {
+    width: 45%;
+    border: 0.3px solid lightgray;
+    padding: 5px;
+    margin: 5px;
+}
+table {
+    width: 100%;
+}
+th {
+    background: black;
+    color: white;
+}
+td { 
+    background: lightgray;
+    color: black;
+    text-align: center;
+}
+
+.potential-return, .odd-value {
+    width: 47%;
+    border: 0.4px solid gray;
+}
+.odd-amount {
+    width: 47%;
+}
+.enter {
+    width: 100%;
+    border: 0.4px solid gray;
+    padding: 3px;
+    font-size: 14px;
+}
+
+.section-2 {
+    border: 0.4px solid black;
+    width: 98%;
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px 0;   
+}
+
+.h3 {
+    color: #18fe
+}
+.cover {
+    width: 98%;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 0.4px solid gray;
+}
+.all {
+    width: 43%;
+    border: 0.4px solid lightgray;
+    padding: 5px;
+    margin: 10px;
+}
+#user, .user-answer-img, .user-answer-text, .computer-answer-text {
+    width: 98%;
+    margin: 5px auto;
+    border: 0.4px solid lightgray;
+}
+#img {
+    width: 98%;
+    margin: 5px auto;
+    height: 100px;
+}
+.computer-answer-img {
+    width: 98%;
+    margin: 5px auto;
+    height: 100px;
+    border: 0.4px solid lightgray;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.head-img {
+    width: 98%;
+    margin: 5px auto;
+    height: 100px;
+    background-image: url('head.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.tail-img {
+    width: 98%;
+    margin: 5px auto;
+    height: 100px;
+    background-image: url('tail.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.hide {
+    display: none;
+}
+
+.overall-result {
+    width: 98%;
+    margin: 10px auto;
+    padding: 5px;
+    text-align: center;
+    color: blue;
+    border: 0.4px solid black;
+}
+.section-3 {
+    width: 98%;
+    margin: 5px auto;
+    padding: 10px;
+    border: 0.4px solid black;
+}
+.section-3 h3 {
+    width: 98%;
+    margin: 5px auto;
+    border: 0.4px solid lightgray;
+    text-align: center;
+}
+.play {
+     background: hsla(120, 30%, 49%, 0.8); 
+    color: black;
+    width: 98%;
+    margin: 5px auto;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.active {
+    background: rgba(160, 20, 0, 0.8);
+    color: white;
+}
+
+.act {
+    background: #26dcff;
+    color: black;
+}

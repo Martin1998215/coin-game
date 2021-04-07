@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Game</title>
+    <link rel="stylesheet" href="game.css" />
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Head section -->
+        <div class="head-section">
+            <h2>Money Game</h2>
+            <h5>Welcome To An Interesting Game for Coins</h5>
+            <h6>Enjoy The Play!</h6>
+        </div>
+        <!-- section 1 -->
+        <div class="section-1">
+            <!-- sub section 1 -->
+            <div class="sub-section-1">
+                <!-- two parts -->
+                <h5 class="head-btn">Head</h5>
+                <h5 class="tail-btn">Tail</h5>
+            </div>
+            <!-- sub section 2 -->
+            <div class="sub-section-2">
+                <div class="odds-section">
+                    <h5>Odds</h5>
+                    <h6 class="hide">0</h6>
+                    <div id="odds">
+                        <h5 class="odd-value-head">0</h5>
+                        <h5 class="odd-value-tail">0</h5>
+                    </div>
+
+                </div>
+                <div class="amount-section">
+                    <h5>Amount</h5>
+                    <h5 class="odd-amount"><input type="number" placeholder=" Amount" class="enter"></h5>
+                </div>
+                <div class="potential-return-section">
+                    <h5>Potential Return</h5>
+                    <h5 class='potential-return'>0</h5>
+                </div>
+                <div class="result-section">
+                    <table>
+                        <tr>
+                            <th>Attempts</th>
+                            <th>Win</th>
+                            <th>Loose</th>
+                            <th>Score</th>
+                        </tr>
+                        <tr>
+                            <td class="attempts">0</td>
+                            <td class="win">0</td>
+                            <td class="loose">0</td>
+                            <td class="score">0</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- section 2 -->
+        <div class="section-2">
+            <h3 class="h3">Game Display</h3>
+            <!-- user -->
+            <div class="cover">
+                <div class="all">
+                    <h6 id="user">User Answer</h6>
+                    <div class="user-answer-img" id="img"></div>
+                    <h5 class="user-answer-text">Value</h5>
+                </div>
+                <!-- computer -->
+                <div class="all">
+                    <h6 id="user">Computer Answer</h6>
+                    <div class="computer-answer-img" id="img"></div>
+                    <h5 class="computer-answer-text">Value</h5>
+                </div>
+
+            </div>
+        </div>
+        <!-- Results -->
+        <h2 class="overall-result">Result</h2>
+        <!-- section 3 -->
+        <div class="section-3">
+            <h3>Amount Balance</h3>
+            <h3>K<span class="amount-balance">0.00</span></h3>
+        </div>
+        <!-- section 4 -->
+        <h2 class="play">Play</h2>
+        <!-- end -->
+    </div>
+
+</body>
+<script src="game.js"></script>
+
+</html>
